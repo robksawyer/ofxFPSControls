@@ -40,13 +40,13 @@ ofxFPSCamera::~ofxFPSCamera() {
     ofRemoveListener(ofEvents().mouseDragged, this, &ofxFPSCamera::mouseDragged);
 }
 void ofxFPSCamera::enableControls() {
-    ofSetCursorPosition(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
-    ofGrabCursor();
+//    ofSetCursorPosition(ofGetWindowWidth()/2, ofGetWindowHeight()/2);
+//    ofGrabCursor();
     controlsEnabled = true;
     activeFrame = ofGetFrameNum()+1;
 }
 void ofxFPSCamera::disableControls() {
-    ofReleaseCursor();
+//    ofReleaseCursor();
     controlsEnabled = false;
 }
 
@@ -126,5 +126,5 @@ void ofxFPSCamera::updateCameraRotation(ofMouseEventArgs& mouse) {
     rotate(mousedelta.y, getSideDir());
     rotate(mousedelta.x, upvector);
     
-    ofSetCursorPosition(center.x, center.y);
+//    ofSetCursorPosition(center.x, center.y);
 }
